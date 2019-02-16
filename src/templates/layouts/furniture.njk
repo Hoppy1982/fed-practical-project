@@ -5,53 +5,81 @@
     <title>{{ title | default(pageTitle) }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/public/css/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="/public/js/script.js"></script>
     {% block head %}{% endblock %}
   </head>
 
   <body>
-
     {% block bodyStart %}{% endblock %}
-
     <div class="container">
       <p class="skip-to-content"><a accesskey="S" title="Access key: S" href="#main">Skip to main content</a></p>
-      
-      {% block header %}
-      <header>
-        <div class="account-bar">
+
+
+      <div class="page-layout">
+        {% block header %}
+        <header>
+          <div class="account-bar">
+              <div class="wrapper">
+                  <div class="account-bar__inner">
+                      <a href="#">Visit PxlPro.com</a>
+                      <div>
+                          <a href="#">Sign in</a>
+                          <a href="#" class="u-hide-x-small">Create account</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="wrapper">
+              <div class="page-header">
+                  <img src="{{ assetPath }}/images/logo.png" alt="Pxl Pro Jobs Logo" class="page-header__logo">
+                  {% include 'includes/navigation.njk' %}
+              </div>
+          </div>
+        </header>
+        {% endblock %}
+
+
+        {% block main %}
+        <main role="main" class="main" id="main">
+          <div class="wrapper">
+              {% block content %}{% endblock %}
+          </div>
+        </main>
+        {% endblock %}
+
+
+        {% block footer %}
+        <footer>
+          <div class="footer-upper">
             <div class="wrapper">
-                <div class="account-bar__inner">
-                    <a href="#">Visit PxlPro.com</a>
-                    <div>
-                        <a href="#">Sign in</a>
-                        <a href="#" class="u-hide-x-small">Create account</a>
-                    </div>
-                </div>
+              <ul class="u-reset-list footer-nav">
+              {% for item in footerNavItems %}
+                <li class="footer-nav__item"><a href="{{ item.href }}">{{ item.label }}</a></li>
+              {% endfor %}
+              </ul>
             </div>
-        </div>
-        <div class="wrapper">
-            <div class="page-header">
-                <img src="{{ assetPath }}/images/logo.png" alt="Pxl Pro Jobs Logo" class="page-header__logo">
-                {% include 'includes/navigation.njk' %}
-            </div>
-        </div>
-      </header>
-      {% endblock %}
-      
-      {% block main %}
-      <main role="main" class="main" id="main">
-        <div class="wrapper">
-            {% block content %}{% endblock %}
-        </div>
-      </main>
-      {% endblock %}
-      
-      {% block footer %}
-      <footer>
-      </footer>
-      {% endblock %}
+          </div>
 
-      {% block bodyEnd %}{% endblock %}
+          <div class="footer-lower">
+            <div class="wrapper">
+              <div class="footer-lower-layout">
+                <p class="footer-lower-copyright">2016. Powered by Madgex</p>
+                <ul class="u-reset-list footer-lower-nav">
+                  <li class="footer-lower-nav__item"><i class="fab fa-facebook-square"></i></li>
+                  <li class="footer-lower-nav__item"><i class="fab fa-twitter"></i></li>
+                  <li class="footer-lower-nav__item"><i class="fab fa-google-plus-g"></i></li>
+                  <li class="footer-lower-nav__item"><i class="fab fa-linkedin-in"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        {% endblock %}
+      </div>
+
+
+    </div>
+    {% block bodyEnd %}{% endblock %}
   </body>
-
 </html>

@@ -29,6 +29,19 @@ body {
   max-width: 1900px;
 }
 
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  //align-items: stretch;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 1 100%;
+  border: solid red 4px;
+}
+
 a {
   color: $color-brand;
   text-decoration: none;
@@ -56,3 +69,4 @@ h6 {
 @import 'components/skip-link';
 @import 'components/account-bar';
 @import 'components/page-header';
+@import 'components/page-footer';

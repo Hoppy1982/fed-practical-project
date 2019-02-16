@@ -16,6 +16,44 @@ module.exports = {
     {
       label: 'Careers advice',
       href: '#careers'
+    },
+    {
+      label: 'Job alerts',
+      href: '#job-alerts'
+    },
+    {
+      label: 'Your jobs',
+      href: '#your-jobs'
+    },
+    {
+      label: 'Advertise a job',
+      href: '#advertise-a-job'
+    }
+  ],
+  footerNavItems: [
+    {
+      label: 'Browse jobs',
+      href: '#browse-jobs'
+    },
+    {
+      label: 'Search employees',
+      href: '#search-employees'
+    },
+    {
+      label: 'Terms & Conditions',
+      href: '#terms-and-conditions'
+    },
+    {
+      label: 'Privacy',
+      href: '#privacy'
+    },
+    {
+      label: 'About us',
+      href: '#about-us'
+    },
+    {
+      label: 'Contact us',
+      href: '#contact-us'
     }
   ],
   heroMessage: 'Search 1,570 jobs.',
