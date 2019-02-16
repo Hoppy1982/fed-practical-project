@@ -5,6 +5,7 @@
     <title>{{ title | default(pageTitle) }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/public/css/styles.css" />
+    <!--TODO Try and not download entire FA library-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="/public/js/script.js"></script>
     {% block head %}{% endblock %}
@@ -64,7 +65,7 @@
           <div class="footer-lower">
             <div class="wrapper">
               <div class="footer-lower-layout">
-                <p class="footer-lower-copyright">2016. Powered by Madgex</p>
+                <p class="footer-lower-copyright"><span class="footer-lower-copyright__icon"><i class="far fa-copyright"></span></i> 2016. Powered by Madgex</p>
                 <ul class="u-reset-list footer-lower-nav">
                   <li class="footer-lower-nav__item"><i class="fab fa-facebook-square"></i></li>
                   <li class="footer-lower-nav__item"><i class="fab fa-twitter"></i></li>

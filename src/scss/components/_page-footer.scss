@@ -35,11 +35,17 @@ footer {
   color: $color-footer-font;
 }
 
-.footer-lower p {
+.footer-lower-copyright {
   font-weight: 300;
   color: $color-footer-font;
   padding: 18px 0px;
   margin: 0px;
+}
+
+.footer-lower-copyright__icon {
+  font-size: 0.5em;
+  vertical-align: middle;
+  color: #a0a0a0;
 }
 
 .footer-lower-nav__item {
