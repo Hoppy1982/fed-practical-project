@@ -1,0 +1,7 @@
+<nav>
+    <ul class="page-nav u-reset-list">
+    {% for item in navItems %}
+        <li class="page-nav__item"><a href="{{ item.href }}">{{ item.label }}</a></li>
+    {% endfor %}
+    </ul>
+</nav>

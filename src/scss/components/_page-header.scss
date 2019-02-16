@@ -1,0 +1,50 @@
+.page-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-small) {
+    .no-js & {
+      display: block;
+    }
+  }
+
+  a:not(.button) {
+    color: inherit;
+  }
+}
+
+.page-header__logo {
+  max-width: 190px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 40%;
+  }
+}
+
+// TODO: move this
+.page-nav {
+  @media screen and (max-width: $breakpoint-small) {
+    > .page-nav__item {
+      display: none;
+    }
+
+    .no-js & > .page-nav__item {
+      display: block;
+      margin: 10px 0 10px;
+    }
+  }
+}
+
+.page-nav__item {
+  display: inline-block;
+  font-family: "ProximaNova";
+  font-weight: 500;
+  margin-left: 30px;
+
+  @media screen and (max-width: 895px) {
+    margin-left: 18px;
+  }
+}
