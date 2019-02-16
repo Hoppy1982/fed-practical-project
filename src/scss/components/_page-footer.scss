@@ -6,6 +6,10 @@ footer {
   background-color: $color-footer-bg;
 }
 
+.footer-upper {
+  margin-top: 3em;
+}
+
 .footer-lower {
   margin-top: 1px;
 }
@@ -15,9 +19,24 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+
 }
 
-.footer-nav {}
+.footer-nav {
+  @media screen and (max-width: $breakpoint-small) {
+    display: flex;
+    flex-direction: column;
+
+    .footer-nav__item {
+      padding: 20px 0px;
+    }
+
+    .footer-nav__item:first-child {
+      margin-left: 30px;
+    }
+  }
+}
 
 .footer-nav__item {
   display: inline-block;
@@ -43,7 +62,7 @@ footer {
 }
 
 .footer-lower-copyright__icon {
-  font-size: 0.5em;
+  font-size: 0.8em;
   vertical-align: middle;
   color: #a0a0a0;
 }
