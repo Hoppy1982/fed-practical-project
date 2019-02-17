@@ -56,7 +56,7 @@ module.exports = {
       href: '#contact-us'
     }
   ],
-  jobsFirst: [
+  jobs: [
     {
       sector: 'Accountancy & Finance',
       nPositions: 41,
@@ -91,9 +91,7 @@ module.exports = {
       sector: 'Computers & IT',
       nPositions: 55,
       href: '#'
-    }
-  ],
-  jobsSecond: [
+    },
     {
       sector: 'Education',
       nPositions: 193,
@@ -128,6 +126,32 @@ module.exports = {
       sector: 'Sports & Fitness',
       nPositions: 72,
       href: '#'
+    }
+  ],
+  featuredJobs: [
+    {
+      position: 'Business Systems Analyst',
+      location: 'New York City',
+      salary: '$30,000 - $40,000',
+      image: 'microsoft.png'
+    },
+    {
+      position: 'Paralegal Positions',
+      location: 'Newton, MA',
+      salary: 'Competitive salary',
+      image: 'amex.png'
+    },
+    {
+      position: 'Operations Director',
+      location: 'Cape Canaveral, FL',
+      salary: 'Up to $100,000',
+      image: 'nasa.png'
+    },
+    {
+      position: 'Circus Clown',
+      location: 'The Big Top',
+      salary: 'Big red shoes',
+      image: 'clown.jpg'
     }
   ],
   heroMessage: 'Search 1,570 jobs.',

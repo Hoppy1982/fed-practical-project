@@ -1,6 +1,6 @@
 .jobs-browser {
   background-color: #f0f0f0;
-  padding: ($page-padding * 3) ($page-padding * 2);
+  padding: ($page-padding * 2) ($page-padding * 2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,10 +52,36 @@
 .jobs-browser__header > a > i {
   vertical-align: baseline;
   font-size: 0.5em;
-
 }
 
-//temp to remove white space between sections
-.jobs-browser h2 {
+
+
+.featured-jobs {
+  border: solid green 1px;
+  padding: 0px;
+}
+
+.featured-jobs__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  border: solid red 1px;
+}
+
+.featured-jobs__img {
+  height: 80px;
+  width: auto;
+  margin-right: $page-padding;
+  flex: 1 1 40%;
+}
+
+.featured-jobs__data {
+  flex: 1 1 60%;
+}
+
+.featured-jobs__link, .featured-jobs__location, .featured-jobs__salary {
+  padding: 0px;
   margin: 0px;
 }

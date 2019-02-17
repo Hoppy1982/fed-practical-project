@@ -1,4 +1,25 @@
+<!--Jobs are split into two cols on wider viewports.
+This is used so that the first list gets an extra item
+if the total of jobs is an odd number-->
+<script>
+  const featuredJobs = {{ featuredJobs | dump | safe }};
+</script>
+
+
+
 <section class="jobs-browser">
+  <!--Jobs are split into two cols on wider viewports.
+  This is used so that the first list gets an extra item
+  if the total of jobs is an odd number-->
+  {% set nJobs = ( jobs | length ) %}
+  {% if nJobs % 2 == 0 %}
+  {% set nJobsFirstCol = nJobs / 2 %}
+  {% set nJobsSecondCol = nJobs / 2 %}
+  {% endif %}
+  {% if nJobs % 2 == 1 %}
+  {% set nJobsFirstCol = (nJobs + 1) / 2 %}
+  {% set nJobsSecondCol = (nJobs - 1) / 2 %}
+  {% endif %}
 
   <div class="jobs-browser__left">
     <div class="jobs-browser__header">
@@ -8,28 +29,23 @@
 
     <div class="jobs-browser__left-layout">
       <ul class="u-reset-list jobs-browser__jobs">
-        {% for item in jobsFirst %}
+        {% for i in range(0, nJobsFirstCol) -%}
           <li class="jobs-browser__jobs-item">
-            <a href="{{ item.href }}">{{ item.sector }}</a>
-            <p>{{ item.nPositions }}</p>
+            <a href="{{ jobs[i].href }}">{{ jobs[i].sector }}</a>
+            <p>{{ jobs[i].nPositions }}</p>
           </li>
-        {% endfor  %}
+        {%- endfor  %}
       </ul>
 
       <ul class="u-reset-list jobs-browser__jobs">
-        {% for item in jobsSecond %}
+        {% for i in range(nJobsFirstCol, nJobs) -%}
           <li class="jobs-browser__jobs-item">
-            <a  href="{{ item.href }}">{{ item.sector }}</a>
-            <p>{{ item.nPositions }}</p>
+            <a href="{{ jobs[i].href }}">{{ jobs[i].sector }}</a>
+            <p>{{ jobs[i].nPositions }}</p>
           </li>
-        {% endfor  %}
+        {%- endfor  %}
       </ul>
     </div>
-  </div>
-
-  <div>
-    {% set val = (navItems | length) %}
-    {{ val }}
   </div>
 
 
@@ -38,6 +54,38 @@
       <h2>Featured jobs</h2>
       <a href="#">View all jobs <i class="fas fa-angle-double-right"></i></a>
     </div>
+
+    <ul class="u-reset-list featured-jobs">
+      <!--will currently break if > 3 li elements-->
+
+      <li class="featured-jobs__item">
+        <img class="featured-jobs__img" src="" alt="Featured job img">
+        <div class="featured-jobs__data">
+          <a class="featured-jobs__link" href='#'></a>
+          <p class="featured-jobs__location"></p>
+          <p class="featured-jobs__salary"></p>
+        </div>
+      </li>
+
+      <li class="featured-jobs__item">
+        <img class="featured-jobs__img" src="" alt="Featured job img">
+        <div class="featured-jobs__data">
+          <a class="featured-jobs__link" href='#'></a>
+          <p class="featured-jobs__location"></p>
+          <p class="featured-jobs__salary"></p>
+        </div>
+      </li>
+
+      <li class="featured-jobs__item">
+        <img class="featured-jobs__img" src="" alt="Featured job img">
+        <div class="featured-jobs__data">
+          <a class="featured-jobs__link" href='#'></a>
+          <p class="featured-jobs__location"></p>
+          <p class="featured-jobs__salary"></p>
+        </div>
+      </li>
+
+    </ul>
   </div>
 
 </section>
