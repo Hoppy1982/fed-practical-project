@@ -3,7 +3,7 @@
   <div class="jobs-browser__left">
     <div class="jobs-browser__header">
       <h2>Browse jobs by sector</h2>
-      <a href="#">View all</a>
+      <a href="#">View all <i class="fas fa-angle-double-right"></i></a>
     </div>
 
     <div class="jobs-browser__left-layout">
@@ -27,11 +27,16 @@
     </div>
   </div>
 
+  <div>
+    {% set val = (navItems | length) %}
+    {{ val }}
+  </div>
+
 
   <div class="jobs-browser__right">
     <div class="jobs-browser__header">
       <h2>Featured jobs</h2>
-      <a href="#">View all jobs</a>
+      <a href="#">View all jobs <i class="fas fa-angle-double-right"></i></a>
     </div>
   </div>
 

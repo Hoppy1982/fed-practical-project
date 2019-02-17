@@ -4,7 +4,7 @@ module.exports = {
   appVersion: pkg.version,
   assetPath: '/public',
   pageTitle: 'PxlPro Jobs',
-  navItemsOne: [
+  navItems: [
     {
       label: 'Home',
       href: '#'

@@ -20,6 +20,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: $page-padding;
 }
 
 .jobs-browser__left-layout {
@@ -36,13 +37,22 @@
   flex: 1 1 50%;
 }
 
+//BEM this
 .jobs-browser__jobs-item > a, .jobs-browser__jobs-item > p {
   display: inline-block;
 }
 
+//BEM this
 .jobs-browser__jobs-item > p {
   margin-left: 10px;
   color: grey;
+}
+
+//BEM this
+.jobs-browser__header > a > i {
+  vertical-align: baseline;
+  font-size: 0.5em;
+
 }
 
 //temp to remove white space between sections
