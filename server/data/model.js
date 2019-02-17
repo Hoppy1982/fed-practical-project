@@ -4,7 +4,7 @@ module.exports = {
   appVersion: pkg.version,
   assetPath: '/public',
   pageTitle: 'PxlPro Jobs',
-  navItems: [
+  navItemsOne: [
     {
       label: 'Home',
       href: '#'
@@ -54,6 +54,80 @@ module.exports = {
     {
       label: 'Contact us',
       href: '#contact-us'
+    }
+  ],
+  jobsFirst: [
+    {
+      sector: 'Accountancy & Finance',
+      nPositions: 41,
+      href: '#'
+    },
+    {
+      sector: 'Architecture, Building & Planning',
+      nPositions: 71,
+      href: '#'
+    },
+    {
+      sector: 'Art & Design',
+      nPositions: 59,
+      href: '#'
+    },
+    {
+      sector: 'Building & Construction',
+      nPositions: 49,
+      href: '#'
+    },
+    {
+      sector: 'Business Management',
+      nPositions: 247,
+      href: '#'
+    },
+    {
+      sector: 'Catering & Hospitality',
+      nPositions: 14,
+      href: '#'
+    },
+    {
+      sector: 'Computers & IT',
+      nPositions: 55,
+      href: '#'
+    }
+  ],
+  jobsSecond: [
+    {
+      sector: 'Education',
+      nPositions: 193,
+      href: '#'
+    },
+    {
+      sector: 'Engineering',
+      nPositions: 47,
+      href: '#'
+    },
+    {
+      sector: 'Media & Journalism',
+      nPositions: 123,
+      href: '#'
+    },
+    {
+      sector: 'Retail & Wholesale',
+      nPositions: 100,
+      href: '#'
+    },
+    {
+      sector: 'Sales',
+      nPositions: 29,
+      href: '#'
+    },
+    {
+      sector: 'Sciences',
+      nPositions: 79,
+      href: '#'
+    },
+    {
+      sector: 'Sports & Fitness',
+      nPositions: 72,
+      href: '#'
     }
   ],
   heroMessage: 'Search 1,570 jobs.',

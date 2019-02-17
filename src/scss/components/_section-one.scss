@@ -81,20 +81,21 @@
   justify-content: space-between;
   z-index: 2;
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-medium) {
     flex-direction: column;
     align-items: center;
 
     .section-one__form-element {
       flex: 0 0 auto;
-      margin: 0.5em 0px;
       width: 80%;
+      margin: 0.5em 0px;
       max-width: 400px;
     }
   }
 }
 
 .section-one__form-element {
+  flex: 1 1 auto;
   padding: 0.5em 0.5em;
   margin: 2em 0px 2em 1.5em;
   border-radius: 4px;
@@ -120,7 +121,7 @@
 }
 
 .section-one__submit:hover {
-  background-color: #f12e58;
+  background-color: #ff0f43;
   color: white;
-  font-weight: 700;
+  cursor: pointer;
 }

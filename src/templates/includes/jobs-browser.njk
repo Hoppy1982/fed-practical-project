@@ -1,0 +1,38 @@
+<section class="jobs-browser">
+
+  <div class="jobs-browser__left">
+    <div class="jobs-browser__header">
+      <h2>Browse jobs by sector</h2>
+      <a href="#">View all</a>
+    </div>
+
+    <div class="jobs-browser__left-layout">
+      <ul class="u-reset-list jobs-browser__jobs">
+        {% for item in jobsFirst %}
+          <li class="jobs-browser__jobs-item">
+            <a href="{{ item.href }}">{{ item.sector }}</a>
+            <p>{{ item.nPositions }}</p>
+          </li>
+        {% endfor  %}
+      </ul>
+
+      <ul class="u-reset-list jobs-browser__jobs">
+        {% for item in jobsSecond %}
+          <li class="jobs-browser__jobs-item">
+            <a  href="{{ item.href }}">{{ item.sector }}</a>
+            <p>{{ item.nPositions }}</p>
+          </li>
+        {% endfor  %}
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="jobs-browser__right">
+    <div class="jobs-browser__header">
+      <h2>Featured jobs</h2>
+      <a href="#">View all jobs</a>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,51 @@
+.jobs-browser {
+  background-color: #f0f0f0;
+  padding: ($page-padding * 3) ($page-padding * 2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.jobs-browser__left, .jobs-browser__right {
+  flex: 1 1 66%;
+  margin-right: $page-padding;
+}
+
+.jobs-browser__right {
+  flex: 1 1 33%;
+}
+
+.jobs-browser__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.jobs-browser__left-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    flex-direction: column;
+  }
+}
+
+.jobs-browser__jobs {
+  flex: 1 1 50%;
+}
+
+.jobs-browser__jobs-item > a, .jobs-browser__jobs-item > p {
+  display: inline-block;
+}
+
+.jobs-browser__jobs-item > p {
+  margin-left: 10px;
+  color: grey;
+}
+
+//temp to remove white space between sections
+.jobs-browser h2 {
+  margin: 0px;
+}
