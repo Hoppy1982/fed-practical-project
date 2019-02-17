@@ -7,13 +7,22 @@
       <div class="section-one__layout-upper">
         <h1>{{ heroMessage }}</h1>
         <p>{{ heroMessageDesc }}</p>
-        <div class="section-one__layout-upper-filter"></div>
+        <div class="section-one__upper-filter"></div>
       </div>
 
       <div class="section-one__layout-lower">
-        <div class="section-one__layout-lower-filter"></div>
-        <form class="section-one-layout-lower__form">
-          <input></input>
+        <div class="section-one__lower-filter"></div>
+        <form class="section-one__form wrapper">
+          <input class="section-one__form-element section-one__text-input" type="text" name="keyword" placeholder="Keyword (e.g. Manager)"></input>
+          <input class="section-one__form-element section-one__text-input" type="text" name="location" placeholder="Location (e.g. Boston)"></input>
+          <select class="section-one__form-element section-one__dropdown">
+            <option>Within 10 miles</option>
+            <option>Within 20 miles</option>
+            <option>Within 50 miles</option>
+            <option>Within 100 miles</option>
+            <option>Select all</option>
+          </select>
+          <input class="section-one__form-element section-one__submit" type="submit" value="Search"></input>
         </form>
       </div>
 

@@ -2,74 +2,87 @@ footer {
   font-family: "ProximaNova";
 }
 
-.footer-upper, .footer-lower {
+.footer__upper, .social-media-bar {
   background-color: $color-footer-bg;
 }
 
-.footer-upper {
+.footer__upper {
   margin-top: 3em;
 }
 
-.footer-lower {
-  margin-top: 1px;
-}
-
-.footer-lower-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 
 
-}
-
-.footer-nav {
+.footer__nav {
   @media screen and (max-width: $breakpoint-small) {
     display: flex;
     flex-direction: column;
 
-    .footer-nav__item {
+    .footer__nav-item {
       padding: 20px 0px;
-    }
-
-    .footer-nav__item:first-child {
-      margin-left: 30px;
+      margin-left: 0px;
     }
   }
 }
 
-.footer-nav__item {
+.footer__nav-item {
   display: inline-block;
   margin-left: 30px;
   padding: 40px 0px;
 }
 
-.footer-nav__item:first-child {
+.footer__nav-item:first-child {
   margin-left: 0px;
 }
 
-.footer-nav__item a {
+.footer__nav-item > a {
   font-size: 1.1rem;
   font-weight: 500;
   color: $color-footer-font;
 }
 
-.footer-lower-copyright {
+
+
+.social-media-bar {
+  margin-top: 1px;
+}
+
+.social-media-bar__layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-media-bar__copyright {
   font-weight: 300;
   color: $color-footer-font;
   padding: 18px 0px;
   margin: 0px;
 }
 
-.footer-lower-copyright__icon {
+.social-media-bar__copyright-icon {
   font-size: 0.8em;
   vertical-align: middle;
   color: #a0a0a0;
 }
 
-.footer-lower-nav__item {
+.social-media-bar__layout {
+  @media screen and (max-width: $breakpoint-x-small) {
+    flex-direction: column;
+  }
+}
+
+.social-media-bar__nav-item {
   display: inline-block;
   font-size: 2rem;
   color: white;
   margin-left: 0.5em;
+}
+
+.social-media-bar__nav-item > a {
+  color: white;
+}
+
+.social-media-bar__nav-item > a:hover {
+  color: grey;
 }

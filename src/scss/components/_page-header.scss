@@ -27,14 +27,28 @@
 // TODO: move this
 .page-nav {
   @media screen and (max-width: $breakpoint-small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: $page-padding;
+
     > .page-nav__item {
-      display: none;
+      //display: none;
+
     }
 
     .no-js & > .page-nav__item {
       display: block;
       margin: 10px 0 10px;
     }
+  }
+
+  @media screen and (max-width: $breakpoint-x-small) {
+    > .page-nav__item {
+      display: none;
+    }
+
   }
 }
 
@@ -43,8 +57,23 @@
   font-family: "ProximaNova";
   font-weight: 500;
   margin-left: 30px;
+  width: 120px;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 0.5em;
+
+  a {
+    text-decoration: none;
+  }
 
   @media screen and (max-width: 895px) {
     margin-left: 18px;
   }
+
+
+}
+
+.page-nav__item:hover {
+  background-color: $color-brand;
+  color: white;
 }
