@@ -146,12 +146,6 @@ module.exports = {
       location: 'Cape Canaveral, FL',
       salary: 'Up to $100,000',
       image: 'nasa.png'
-    },
-    {
-      position: 'Circus Clown',
-      location: 'The Big Top',
-      salary: 'Big red shoes',
-      image: 'clown.jpg'
     }
   ],
   heroMessage: 'Search 1,570 jobs.',

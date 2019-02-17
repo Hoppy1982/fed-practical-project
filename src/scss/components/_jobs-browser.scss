@@ -1,18 +1,32 @@
 .jobs-browser {
   background-color: #f0f0f0;
-  padding: ($page-padding * 2) ($page-padding * 2);
+}
+
+.jobs-browser__layout {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media screen and (max-width: $breakpoint-small) {
+      flex-direction: column;
+  }
 }
 
-.jobs-browser__left, .jobs-browser__right {
+.jobs-browser__left {
   flex: 1 1 66%;
   margin-right: $page-padding;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    flex: 1 1 50%;
+  }
 }
 
 .jobs-browser__right {
   flex: 1 1 33%;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    flex: 1 1 50%;
+  }
 }
 
 .jobs-browser__header {
@@ -20,7 +34,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: $page-padding;
+  margin-top: 2em;
 }
 
 .jobs-browser__left-layout {
@@ -35,6 +49,14 @@
 
 .jobs-browser__jobs {
   flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.jobs-browser__jobs-item {
+  flex: 1 1 50%;
+  margin-bottom: 1em;
 }
 
 //BEM this
@@ -44,7 +66,7 @@
 
 //BEM this
 .jobs-browser__jobs-item > p {
-  margin-left: 10px;
+  margin: 0px;
   color: grey;
 }
 
@@ -57,8 +79,9 @@
 
 
 .featured-jobs {
-  border: solid green 1px;
-  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .featured-jobs__item {
@@ -66,15 +89,12 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 1em;
-  border: solid red 1px;
+  margin-bottom: 2em;
 }
 
 .featured-jobs__img {
   height: 80px;
-  width: auto;
   margin-right: $page-padding;
-  flex: 1 1 40%;
 }
 
 .featured-jobs__data {
