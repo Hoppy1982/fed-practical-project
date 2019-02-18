@@ -6,30 +6,60 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  //justify-content: space-between;
 }
 
 .featured-employers__header {}
 
 .featured-employers__item {
   min-height: 100px;
-  flex: 1 1 auto;
+  width: $col-width-2;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding: $page-padding / 2;
+  //margin: $page-padding / 2;
+  box-sizing: border-box;
 
   @media screen and (max-width: $breakpoint-medium) {
-  
+    width: $col-width-4;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: $col-width-6;
+  }
+
+  @media screen and (max-width: $breakpoint-x-small) {
+    width: $col-width-12;
   }
 
 }
 
 
 
-$column-count: 12;
-@for $i from 1 through $column-count {
-  $width: percentage($i/$column-count);
-  .col-#{$i} {
-    width: $width;
-  }
+.featured-employers__img {
+  display: block;
+  //object-fit: cover;
+  width: 100%;
+
+  box-sizing: border-box;
+  border: solid lightgrey 2px;
 }
 
+
+@media screen and (max-width: $breakpoint-medium) {
+  width: $col-width-4;
+
+  @for $i from 0 through $n-featured-employers {
+    @if $i % 3 == 0 {
+      .featured-employers__item:nth-child(#{$i - 1}) {
+        margin-left: 0px;
+      }
+    }
+  }
+}
 
 
 
@@ -43,4 +73,15 @@ $column-count: 12;
 
 .blue {
   background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
 }
