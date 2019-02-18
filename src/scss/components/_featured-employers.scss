@@ -1,0 +1,87 @@
+.featured-employers {
+
+}
+
+.featured-employers__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+}
+
+.featured-employers__header {}
+
+.featured-employers__item {
+  min-height: 100px;
+  width: $col-width-2;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding: $page-padding / 2;
+  //margin: $page-padding / 2;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    width: $col-width-4;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: $col-width-6;
+  }
+
+  @media screen and (max-width: $breakpoint-x-small) {
+    width: $col-width-12;
+  }
+
+}
+
+
+
+.featured-employers__img {
+  display: block;
+  //object-fit: cover;
+  width: 100%;
+
+  box-sizing: border-box;
+  border: solid lightgrey 2px;
+}
+
+
+@media screen and (max-width: $breakpoint-medium) {
+  width: $col-width-4;
+
+  @for $i from 0 through $n-featured-employers {
+    @if $i % 3 == 0 {
+      .featured-employers__item:nth-child(#{$i - 1}) {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
+}
