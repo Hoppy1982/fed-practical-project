@@ -1,9 +1,82 @@
 .cta {
-  background-color: grey;
-  min-height: 200px;
-  min-width: 200px;
+  background-image: url('/public/images/_ctas/cta-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.cta h1 {
+.cta__layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: ($page-padding * 2) $page-padding;
+  border: solid green 2px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    flex-direction: column;
+
+    .cta__item {
+      margin-left: 0px;
+      margin-top: $page-padding;
+    }
+    .cta__item:first-child {
+      margin-top: 0px;
+    }
+  }
+}
+
+.cta__item {
+  position: relative;
+  min-height: 200px;
+  margin-left: $page-padding;
+  flex: 1 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta__item:first-child {
+  margin-left: 0px;
+}
+
+.cta__filter {
+  position: absolute;
+  background-color: #262626;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.cta__item-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  padding-left: $page-padding;
+  padding-right: $page-padding;
+}
+
+.cta__item i {
+  color: white;
   margin: 0px;
+  font-size: 2em;
+
+}
+
+.cta__item h2,{
+  color: white;
+  text-align: center;
+  margin: 0px;
+
+}
+
+.cta__item p,{
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
