@@ -1,17 +1,20 @@
-.featured-employers {
+//TODO featured-employee__header styling
+//TODO Maybe make links to employers
 
-}
+.featured-employers {}
+
 
 .featured-employers__content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  //justify-content: space-between;
 }
+
 
 .featured-employers__header {}
 
-.featured-employers__item {
+
+.featured-employers__employer {
   min-height: 100px;
   width: $col-width-2;
   flex: 0 0 auto;
@@ -19,8 +22,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //padding: $page-padding / 2;
-  //margin: $page-padding / 2;
+  margin-top: $page-padding;
   box-sizing: border-box;
 
   @media screen and (max-width: $breakpoint-medium) {
@@ -38,31 +40,66 @@
 }
 
 
-
 .featured-employers__img {
-  display: block;
+  width: calc(#{100%} - #{$page-padding});
+  border: solid lightgrey 3px;
+  //display: block;
   //object-fit: cover;
-  width: 100%;
+}
 
-  box-sizing: border-box;
-  border: solid lightgrey 2px;
+//TODO Find out why the chuff targeting first:child doesn't work
+.featured-employers__employer:nth-child(2) {
+  align-items: flex-start;
+}
+
+.featured-employers__employer:last-child {
+  align-items: flex-end;
 }
 
 
+//This lot is to get push out the img
+//elements to the outside of their flexboxes.
 @media screen and (max-width: $breakpoint-medium) {
-  width: $col-width-4;
-
   @for $i from 0 through $n-featured-employers {
     @if $i % 3 == 0 {
-      .featured-employers__item:nth-child(#{$i - 1}) {
-        margin-left: 0px;
+      .featured-employers__employer:nth-child(#{$i - 1}) {
+        align-items: flex-start;
+      }
+    }
+    @if ($i + 1) % 3 == 0 {
+      .featured-employers__employer:nth-child(#{$i - 1}) {
+        align-items: flex-end;
       }
     }
   }
 }
 
 
+@media screen and (max-width: $breakpoint-small) {
+  @for $i from 0 through $n-featured-employers {
+    @if $i % 2 == 0 {
+      .featured-employers__employer:nth-child(#{$i}) {
+        align-items: flex-start;
+      }
+    }
+    @if ($i + 1) % 2 == 0 {
+      .featured-employers__employer:nth-child(#{$i}) {
+        align-items: flex-end;
+      }
+    }
+  }
+}
 
+
+@media screen and (max-width: $breakpoint-x-small) {
+  .featured-employers__employer > img{
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+  }
+}
+
+//Temp - can delete
 .red {
   background-color: red;
 }
