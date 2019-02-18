@@ -10,7 +10,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding: ($page-padding * 2) $page-padding;
-  border: solid green 2px;
 
   @media screen and (max-width: $breakpoint-small) {
     flex-direction: column;

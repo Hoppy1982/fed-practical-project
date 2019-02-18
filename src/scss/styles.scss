@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'normalize';
+@import 'grid.scss';
 @font-face {
   font-family: 'ProximaNova';
   src: url('../fonts/ProximaNova-Regular.woff') format('woff');
@@ -71,4 +72,5 @@ h6 {
 @import 'components/section-one';
 @import 'components/jobs-browser';
 @import 'components/cta';
+@import 'components/featured-employers';
 @import 'components/page-footer';

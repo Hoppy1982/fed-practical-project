@@ -1,0 +1,46 @@
+.featured-employers {
+
+}
+
+.featured-employers__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.featured-employers__header {}
+
+.featured-employers__item {
+  min-height: 100px;
+  flex: 1 1 auto;
+
+  @media screen and (max-width: $breakpoint-medium) {
+  
+  }
+
+}
+
+
+
+$column-count: 12;
+@for $i from 1 through $column-count {
+  $width: percentage($i/$column-count);
+  .col-#{$i} {
+    width: $width;
+  }
+}
+
+
+
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
