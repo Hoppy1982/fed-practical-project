@@ -11,7 +11,17 @@
 }
 
 
-.featured-employers__header {}
+.featured-employers__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.featured-employers__header > a > i {
+  vertical-align: baseline;
+  font-size: 0.5em;
+}
 
 
 .featured-employers__employer {
