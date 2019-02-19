@@ -4,6 +4,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const nodemon = require('gulp-nodemon');
 const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer')
 
 // ensure Chalk (used in nodemon) always uses colour
 process.env.FORCE_COLOR = 1;
@@ -25,6 +26,10 @@ function css(done) {
         outputStyle: 'expanded'
       }).on('error', sass.logError)
     )
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(sourcemaps.write('./'))
     .pipe(dest('public/css'))
     .pipe(browserSync.stream());
