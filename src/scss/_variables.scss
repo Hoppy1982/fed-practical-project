@@ -8,18 +8,9 @@ $breakpoint-medium: 1100px;
 $spacing-unit: 20px;
 $page-padding: $spacing-unit;
 
+
 $color-footer-bg: #434243;
 $color-footer-font: #c9c9c9;
-
-$col-width-1: percentage(1/12);
-$col-width-2: percentage(2/12);
-$col-width-3: percentage(3/12);
-$col-width-4: percentage(4/12);
-$col-width-6: percentage(6/12);
-$col-width-8: percentage(8/12);
-$col-width-9: percentage(9/12);
-$col-width-12: percentage(12/12);
-
 $n-featured-employers: 6;
 $col1: calc(#{percentage(1/12)} - #{$page-padding * 11 / 12});
 $col2: calc(#{percentage(2/12)} - #{$page-padding * 10 / 12});
