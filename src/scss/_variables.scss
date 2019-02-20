@@ -21,18 +21,15 @@ $col-width-9: percentage(9/12);
 $col-width-12: percentage(12/12);
 
 $n-featured-employers: 6;
-
-$col1: calc(#{percentage(1/12)} - #{$page-padding});
-$col2: calc(#{percentage(2/12)} - #{$page-padding});
-$col3: calc(#{percentage(3/12)} - #{$page-padding});
-$col4: calc(#{percentage(4/12)} - #{$page-padding});
-
-$col5: calc(#{percentage(5/12)} - #{$page-padding});
-$col6: calc(#{percentage(6/12)} - #{$page-padding});
-$col7: calc(#{percentage(7/12)} - #{$page-padding});
-$col8: calc(#{percentage(8/12)} - #{$page-padding});
-
-$col9: calc(#{percentage(9/12)} - #{$page-padding});
-$col10: calc(#{percentage(10/12)} - #{$page-padding});
-$col11: calc(#{percentage(11/12)} - #{$page-padding});
+$col1: calc(#{percentage(1/12)} - #{$page-padding * 11 / 12});
+$col2: calc(#{percentage(2/12)} - #{$page-padding * 10 / 12});
+$col3: calc(#{percentage(3/12)} - #{$page-padding * 9 / 12});
+$col4: calc(#{percentage(4/12)} - #{$page-padding * 8 / 12});
+$col5: calc(#{percentage(5/12)} - #{$page-padding * 7 / 12});
+$col6: calc(#{percentage(6/12)} - #{$page-padding * 6 / 12});
+$col7: calc(#{percentage(7/12)} - #{$page-padding * 5 / 12});
+$col8: calc(#{percentage(8/12)} - #{$page-padding * 4 / 12});
+$col9: calc(#{percentage(9/12)} - #{$page-padding * 3 / 12});
+$col10: calc(#{percentage(10/12)} - #{$page-padding * 2 / 12});
+$col11: calc(#{percentage(11/12)} - #{$page-padding * 1 / 12});
 $col12: percentage(12/12);

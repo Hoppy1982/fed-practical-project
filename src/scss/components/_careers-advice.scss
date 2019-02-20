@@ -89,15 +89,36 @@
   }
 }
 
+.careers-advice__post-job-dummy-content {
+  visibility: hidden;
+}
+
+.careers-advice__secondary-articles-a, .careers-advice__secondary-articles-b {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.careers-advice__secondary-article {
+  width: calc(#{50%} - #{$page-padding / 2});
+  //flex: 1 1 auto;
+  //temp
+  height: 100%;
+  border: solid green 3px;
+}
+
 @media screen and (max-width: $breakpoint-medium) {
   .careers-advice__content {width: $col6;}
   .careers-advice__primary-article-a {order: 1};
   .careers-advice__primary-article-b {order: 2};
-  .careers-advice__advert {order: 3};
-  //temp
-  .careers-advice__post-job {order: 4};
-  .careers-advice__content-5 {order: 5};
-  .careers-advice__content-6 {order: 6};
+  .careers-advice__secondary-articles-a {order: 3};
+  .careers-advice__secondary-articles-b {order: 4};
+  .careers-advice__advert {order: 5};
+  .careers-advice__post-job {order: 6};
+  .careers-advice__secondary-articles-a {flex-direction: column;}
+  .careers-advice__secondary-articles-b {flex-direction: column;}
+  .careers-advice__secondary-article {width: 100%;}
+  .careers-advice__secondary-article:first-child {margin-bottom: $page-padding;}
 }
 
 @media screen and (max-width: $breakpoint-x-small) {

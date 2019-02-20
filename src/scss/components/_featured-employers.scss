@@ -8,6 +8,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }
 
 
@@ -26,35 +28,32 @@
 
 .featured-employers__employer {
   min-height: 100px;
-  width: $col-width-2;
+  width: $col2;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: $page-padding;
-  box-sizing: border-box;
 
   @media screen and (max-width: $breakpoint-medium) {
-    width: $col-width-4;
+    width: $col4;
   }
 
   @media screen and (max-width: $breakpoint-small) {
-    width: $col-width-6;
+    width: $col6;
   }
 
   @media screen and (max-width: $breakpoint-x-small) {
-    width: $col-width-12;
+    width: $col12;
   }
 
 }
 
 
 .featured-employers__img {
-  width: calc(#{100%} - #{$page-padding});
+  width: 100%;
   border: solid lightgrey 3px;
-  //display: block;
-  //object-fit: cover;
 }
 
 //TODO Find out why the chuff targeting first:child doesn't work
