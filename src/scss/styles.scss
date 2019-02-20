@@ -65,6 +65,20 @@ h6 {
   padding: 0 $page-padding;
 }
 
+.button-1 {
+  background-color: #f12e58;
+  border: none;
+  color: white;
+  padding: 0.5em 0.5em;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button-1:hover {
+  background-color: #ff0f43;
+  color: white;
+  cursor: pointer;
+}
+
 @import 'utilities';
 @import 'components/skip-link';
 @import 'components/account-bar';
