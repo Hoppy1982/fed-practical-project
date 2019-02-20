@@ -1,0 +1,132 @@
+.page-nav {position: relative;}
+
+.page-nav__menu-wrapper {
+  position: absolute;
+  top: 0px;
+  right: 180px;
+  border: solid blue 3px;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+.page-nav__list {
+  display: flex;
+  flex-direction: row;
+  //transition: margin 300ms ease-in;
+}
+
+.page-nav__item {
+  display: inline-block;
+  font-family: "ProximaNova";
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 120px;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 4px;
+  a {text-decoration: none;}
+}
+
+.page-nav__item:hover {
+  background-color: $color-brand;
+  color: white;
+  font-weight: 200;
+}
+
+#page-nav__expand-toggle {
+  display: none;
+}
+
+#page-nav__menu-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 11px;
+  color: #fff;
+  background-color: #222;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+#page-nav__expand-toggle:checked ~ .page-nav__list {
+    right: 0px;
+    margin-right: - $page-padding;
+    transition: margin 300ms ease-in;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .page-nav__list {
+    flex-direction: column;
+    margin-right: - 250px;
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    width: 250px;
+    color: #fff;
+    background-color: #222;
+    z-index: 4;
+  }
+
+  #page-nav__menu-button {
+    //position: fixed;
+    //top: 60px;
+    //right: 0px;
+    //z-index: 4;
+    //margin: 0px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-medium - 3px) {
+  .page-nav__list {transition: margin 300ms ease-in;}
+}
+/*Before make small screen nav
+.page-nav__list {
+  @media screen and (max-width: $breakpoint-small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: $page-padding;
+
+    > .page-nav__item {
+      //display: none;
+    }
+
+    .no-js & > .page-nav__item {
+      display: block;
+      margin: 10px 0 10px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-x-small) {
+    > .page-nav__item {
+      display: none;
+    }
+
+  }
+}
+
+.page-nav__item {
+  display: inline-block;
+  font-family: "ProximaNova";
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 120px;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 4px;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 895px) {
+    margin-left: 18px;
+  }
+}
+
+.page-nav__item:hover {
+  background-color: $color-brand;
+  color: white;
+  font-weight: 200;
+}
+*/

@@ -1,0 +1,35 @@
+<nav class="page-nav">
+<!--
+  <input id="page-nav__expand-toggle" type="checkbox" />
+  <label id="page-nav__menu-button" for="page-nav__expand-toggle">Nav Menu</label>
+
+  <ul class="u-reset-list page-nav__list">
+  {% for item in navItems %}
+      <li class="page-nav__item"><a href="{{ item.href }}">{{ item.label }}</a></li>
+  {% endfor %}
+  </ul>
+-->
+
+  <div class="page-nav__menu-wrapper">
+    <input id="page-nav__expand-toggle" type="checkbox" />
+    <label id="page-nav__menu-button" for="page-nav__expand-toggle">Nav Menu</label>
+
+    <ul class="u-reset-list page-nav__list">
+    {% for item in navItems %}
+        <li class="page-nav__item"><a href="{{ item.href }}">{{ item.label }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+</nav>
+
+
+<!--Before start making small screen nav
+<nav>
+    <ul class="u-reset-list page-nav">
+    {% for item in navItems %}
+        <li class="page-nav__item"><a href="{{ item.href }}">{{ item.label }}</a></li>
+    {% endfor %}
+    </ul>
+</nav>
+-->
