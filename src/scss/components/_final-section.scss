@@ -1,0 +1,59 @@
+.final-section {
+
+}
+
+.final-section__wrapper {
+  padding-top: $page-padding * 2;
+  //padding-bottom: $page-padding * 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.final-section__content {
+  width: $col4;
+  padding: $page-padding;
+  margin-bottom: $page-padding * 2;
+  h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+  }
+}
+
+.final-section__about-us {
+  background-color: #f0f0f0;
+}
+
+.final-section__app-download {
+  background-color: #e4f3fc;
+  padding-right: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  > img {margin-left: $page-padding;}
+   a {
+    cursor: pointer;
+    width: 50%;
+    img {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      max-width: 200px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.final-section__featured-campaigns {
+  background-color: #f0f0f0;
+  ul {
+    color: #1383c4;
+  }
+  a {color: #1383c4;}
+}
+
+
+@media screen and (max-width: $breakpoint-medium) {
+  .final-section__wrapper {flex-direction: column;}
+  .final-section__content {width: $col12;}
+}
