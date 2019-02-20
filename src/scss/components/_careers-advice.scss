@@ -1,0 +1,111 @@
+.careers-advice {
+  background-color: #f0f0f0;
+}
+
+.careers-advice__wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: $page-padding * 2;
+  padding-top: $page-padding * 2;
+  justify-content: space-between;
+}
+
+.careers-advice__left-content {
+  width: calc(#{$col-width-4} - #{$page-padding});
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //temp
+  border: solid red 3px;
+  margin: 0px;
+  //min-height: 600px;
+}
+
+.careers-advice__featured-advert {
+  height: calc(#{50%} - #{$page-padding});
+  width: 100%;
+  text-align: center;
+  //temp
+  border: solid blue 3px;
+}
+
+.careers-advice__featured-advert-img {
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+  border: solid orange 3px;
+}
+
+.careers-advice__post-job {
+  height: calc(#{50%} - #{$page-padding});
+  background-image: url('/public/images/advertise-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  //temp
+  border: solid blue 3px;
+}
+
+
+.careers-advice__right-content {
+  width: calc(#{$col-width-8} - #{$page-padding});
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //temp
+  border: solid green 3px;
+}
+
+.careers-advice__right-top-content {
+  height: calc(#{50%} - #{$page-padding});
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  //temp
+  border: solid blue 3px;
+}
+
+.careers-advice__right-bottom-content {
+  height: calc(#{50%} - #{$page-padding});
+  width: 100%;
+  border: solid blue 3px;
+}
+
+.careers-advice__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.careers-advice__header > h2 {
+  font-size: 1em;
+}
+
+.careers-advice__primary-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+//BEMify this lot
+.careers-advice__primary-article > img{
+  width: calc(#{50%} - #{$page-padding});
+  //temp
+  border: solid green 3px;
+}
+
+.careers-advice__primary-article > div {
+  width: calc(#{50%} - #{$page-padding});
+  //temp
+  border: solid green 3px;
+  overflow-y: hidden;
+}
