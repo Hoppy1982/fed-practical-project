@@ -81,7 +81,7 @@
   justify-content: space-between;
   z-index: 2;
 
-  @media screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-small) {
     flex-direction: column;
     align-items: center;
 
@@ -90,6 +90,12 @@
       width: 80%;
       margin: 0.5em 0px;
       max-width: 400px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-x-small) {
+    .section-one__form-element {
+      width: $col12;
     }
   }
 }
@@ -112,16 +118,4 @@
 
 .section-one__dropdown, .section-one__submit {
   flex: 0 0 200px;
-}
-
-.section-one__submit {
-  background-color: #f12e58;
-  border: none;
-  color: white;
-}
-
-.section-one__submit:hover {
-  background-color: #ff0f43;
-  color: white;
-  cursor: pointer;
 }
