@@ -4,7 +4,6 @@ window.addEventListener('load', function(event) {
   populateRandFeaturedJobs(featuredJobs)
 })
 
-
 function populateRandFeaturedJobs(featuredJobs) {
   let randFeatured = randomThreeFromArray(featuredJobs)
   let featuredElements = document.getElementsByClassName('featured-jobs__item')
