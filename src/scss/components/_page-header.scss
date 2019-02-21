@@ -19,6 +19,7 @@
 
 .page-header__logo {
   max-width: 190px;
+  margin-bottom: $page-padding;
 
   @media screen and (max-width: $breakpoint-small) {
     width: 40%;
