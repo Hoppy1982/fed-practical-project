@@ -1,18 +1,22 @@
-.page-nav {position: relative;}
+.page-nav {}
 
-.page-nav__menu-wrapper {
-  position: absolute;
-  top: 0px;
-  right: 180px;
-  border: solid blue 3px;
-  min-height: 100px;
-  min-width: 100px;
+#page-nav__menu-wrapper {
+  text-align: right;
+  overflow: hidden;
+  //height: 360px;
+  //: relative;
 }
 
 .page-nav__list {
   display: flex;
   flex-direction: row;
   //transition: margin 300ms ease-in;
+  position: absolute;
+  top: 80;
+  right: 0;
+  //overflow: hidden;
+  align-items: center;
+  z-index: 3;
 }
 
 .page-nav__item {
@@ -20,6 +24,7 @@
   font-family: "ProximaNova";
   font-weight: 600;
   font-size: 1.1rem;
+  height: 3em;
   width: 120px;
   padding: 10px 0px;
   text-align: center;
@@ -38,7 +43,7 @@
 }
 
 #page-nav__menu-button {
-  display: inline-block;
+  display: none;
   margin-top: 12px;
   padding: 5px 11px;
   color: #fff;
@@ -47,23 +52,76 @@
   border-radius: 3px;
 }
 
-#page-nav__expand-toggle:checked ~ .page-nav__list {
-    right: 0px;
-    margin-right: - $page-padding;
-    transition: margin 300ms ease-in;
+#page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper {
+  height: 18em;
+  //transition: height 300ms ease-in;
 }
 
+#page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper .page-nav__list {
+    //transition: height 300ms ease-in;
+    //transition: margin 300ms ease-in;
+    //height: 18em;
+    //margin-right: 0px;
+    animation: nav-menu-in 1s;
+    animation-fill-mode:forwards;
+}
+
+#page-nav__expand-toggle:not(checked) ~ #page-nav__menu-wrapper .page-nav__list {
+    //transition: height 300ms ease-in;
+    //transition: margin 300ms ease-in;
+    //height: 18em;
+    //margin-right: 0px;
+    animation: nav-menu-out 1s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes nav-menu-in {
+  0% {
+    height: 0px;
+    margin-right: - 250px - $page-padding;
+  }
+  50% {
+    height: 18em;
+  }
+  100% {
+    margin-right: 0px;
+  }
+}
+
+@keyframes nav-menu-out {
+  0% {
+    margin-right: 0px;
+
+  }
+  50% {
+    //height: 0px;
+    margin-right: - 250px - $page-padding;
+  }
+  100% {
+    height: 0px;
+    margin-right: - 250px - $page-padding;
+  }
+}
+
+
 @media screen and (max-width: $breakpoint-medium) {
+  #page-nav__menu-button {
+    display: inline-block;
+  }
+
   .page-nav__list {
     flex-direction: column;
-    margin-right: - 250px;
-    position: fixed;
-    top: 100px;
-    right: 0px;
+    //margin-right: - 250px - $page-padding;
+    //height: 0px;
     width: 250px;
     color: #fff;
     background-color: #222;
-    z-index: 4;
+  }
+
+  .page-nav__item {
+    width: 100%;
+    border-radius: 0;
+    border-top: solid #fff 1px;
   }
 
   #page-nav__menu-button {
@@ -76,7 +134,15 @@
 }
 
 @media screen and (max-width: $breakpoint-medium - 3px) {
-  .page-nav__list {transition: margin 300ms ease-in;}
+  //.page-nav__list {transition: margin 300ms ease-in;}
+}
+
+@media screen and (max-width: $breakpoint-small) {
+
+  .page-nav__list {
+    width: 100%;
+  }
+
 }
 /*Before make small screen nav
 .page-nav__list {

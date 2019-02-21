@@ -9,10 +9,10 @@
   {% endfor %}
   </ul>
 -->
+  <input id="page-nav__expand-toggle" type="checkbox" />
+  <label id="page-nav__menu-button" for="page-nav__expand-toggle">Nav Menu</label>
 
-  <div class="page-nav__menu-wrapper">
-    <input id="page-nav__expand-toggle" type="checkbox" />
-    <label id="page-nav__menu-button" for="page-nav__expand-toggle">Nav Menu</label>
+  <div id="page-nav__menu-wrapper">
 
     <ul class="u-reset-list page-nav__list">
     {% for item in navItems %}
