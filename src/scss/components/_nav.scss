@@ -44,11 +44,16 @@
 
 #page-nav__menu-button {
   display: none;
-  font-size: 2em;
-  padding: 0px 10px;
-  color: #fff;
+  padding: 4px;
+  width: 48px;
+  height: 48px;
   background-color: $color-brand;
   border-radius: 6px;
+
+  img {
+   width: 100%;
+   height: 100%;
+ }
 }
 
 #page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper {
@@ -87,7 +92,6 @@
   .page-nav__item:hover {
     background-color: $color-brand-tint;
     color: $color-brand;
-    font-weight: 200;
   }
 
   #page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper {
