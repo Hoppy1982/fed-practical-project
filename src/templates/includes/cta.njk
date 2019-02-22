@@ -1,4 +1,6 @@
-<!--TODO replace icons with ones closer to design if possible-->
+<!--NB Couldn't get includes to work with svgs in their current directory.
+Maybe because the relative pathing can only go as high as the where the
+root html is. There maybe downsides to using img tags for svgs-->
 
 <section class="cta">
   <div class="wrapper cta__layout">
@@ -6,7 +8,7 @@
     <div class="cta__item">
       <div class="cta__filter"></div>
       <div class="cta__item-contents">
-        <i class="far fa-envelope"></i>
+        <img src="{{ assetPath }}/images/_ctas/icon_email.svg" >
         <h2>Get instant job alerts</h2>
         <p>Personalised job recommendations sent straight to your email.</p>
       </div>
@@ -15,7 +17,7 @@
     <div class="cta__item">
       <div class="cta__filter"></div>
       <div class="cta__item-contents">
-        <i class="far fa-user"></i>
+        <img src="{{ assetPath }}/images/_ctas/icon_profile.svg" >
         <h2>Create an account for free</h2>
         <p>Shortlist jobs, manage your job alerts and receive special offers.</p>
       </div>
@@ -24,7 +26,7 @@
     <div class="cta__item">
       <div class="cta__filter"></div>
       <div class="cta__item-contents">
-        <i class="fas fa-upload"></i>
+        <img src="{{ assetPath }}/images/_ctas/icon_upload.svg" >
         <h2>Upload your resume</h2>
         <p>Upload your resume so our employers can match your details to the best jobs.</p>
       </div>
