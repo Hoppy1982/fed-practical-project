@@ -1,8 +1,8 @@
-<!--Makes the featuredJobs object available inside js.
-Had to do that to randomize which featured jobs are displayed
-and randomize the order they are rendered.
-Tried and faied to achieve with nunjucks-->
-<script>const featuredJobs = {{ featuredJobs | dump | safe }};</script>
+<!--Makes the featuredJobs object available inside js-->
+<script>
+  const featuredJobs = {{ featuredJobs | dump | safe }};
+</script>
+
 
 
 <section class="jobs-browser">

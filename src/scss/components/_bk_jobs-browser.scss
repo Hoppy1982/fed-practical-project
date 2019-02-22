@@ -10,20 +10,12 @@
   justify-content: space-between;
 }
 
-//TODO finish using col variables to determine width and look at whether can
-//remove some flex
 .jobs-browser__left {
-  //flex: 1 1 66%;
+  flex: 1 1 66%;
   margin-right: $page-padding;
-  //temp
-  width: $col8;
 }
 
-.jobs-browser__right {
-  //flex: 1 1 33%;
-  //temp
-  width: $col4;
-}
+.jobs-browser__right {flex: 1 1 33%;}
 
 .jobs-browser__header {
   display: flex;
