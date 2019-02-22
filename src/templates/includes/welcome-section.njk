@@ -1,0 +1,27 @@
+<section class="welcome-section">
+  <div class="welcome-section__layout">
+
+    <div class="welcome-section__layout-upper">
+      <h1>{{ heroMessage }}</h1>
+      <p>{{ heroMessageDesc }}</p>
+      <div class="welcome-section__upper-filter"></div>
+    </div>
+
+    <div class="welcome-section__layout-lower">
+      <div class="welcome-section__lower-filter"></div>
+      <form class="welcome-section__form wrapper">
+        <input class="welcome-section__form-element welcome-section__text-input" type="text" name="keyword" placeholder="Keyword (e.g. Manager)"></input>
+        <input class="welcome-section__form-element welcome-section__text-input" type="text" name="location" placeholder="Location (e.g. Boston)"></input>
+        <select class="welcome-section__form-element welcome-section__dropdown">
+          <option>Within 10 miles</option>
+          <option>Within 20 miles</option>
+          <option>Within 50 miles</option>
+          <option>Within 100 miles</option>
+          <option>Select all</option>
+        </select>
+        <input class="welcome-section__form-element button-1" type="submit" value="Search"></input>
+      </form>
+    </div>
+
+  </div>
+</section>

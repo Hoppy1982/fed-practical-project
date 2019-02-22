@@ -1,4 +1,5 @@
-.section-one {
+//LARGE DISPLAY
+.welcome-section {
   background-image: url('/public/images/hero.png');
   background-size: cover;
   background-position: center;
@@ -7,7 +8,7 @@
   position: relative;
 }
 
-.section-one__layout {
+.welcome-section__layout {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -18,7 +19,7 @@
   justify-content: space-between;
 }
 
-.section-one__layout-upper {
+.welcome-section__layout-upper {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -27,7 +28,7 @@
   position: relative;
 }
 
-.section-one__layout-lower {
+.welcome-section__layout-lower {
   flex: 0 0 auto;
   position: relative;
   display: flex;
@@ -36,27 +37,22 @@
   justify-content: center;
 }
 
-.section-one__layout-upper > h1, .section-one__layout-upper > p {
+.welcome-section__layout-upper > h1, .welcome-section__layout-upper > p {
   color: white;
   margin: 0px;
   padding: 0px;
   z-index: 2;
-
-  @media screen and (max-width: $breakpoint-small) {
-    margin: 0px $page-padding * 2;
-    text-align: center;
-  }
 }
 
-.section-one__layout-upper > h1 {
+.welcome-section__layout-upper > h1 {
   font-size: 3em;
 }
 
-.section-one__layout-upper > p {
+.welcome-section__layout-upper > p {
   font-size: 1.5em;
 }
 
-.section-one__upper-filter {
+.welcome-section__upper-filter {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -65,7 +61,7 @@
   z-index: 1;
 }
 
-.section-one__lower-filter {
+.welcome-section__lower-filter {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -74,33 +70,15 @@
   z-index: 1;
 }
 
-.section-one__form {
+.welcome-section__form {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   z-index: 2;
-
-  @media screen and (max-width: $breakpoint-small) {
-    flex-direction: column;
-    align-items: center;
-
-    .section-one__form-element {
-      flex: 0 0 auto;
-      width: 80%;
-      margin: 0.5em 0px;
-      max-width: 400px;
-    }
-  }
-
-  @media screen and (max-width: $breakpoint-x-small) {
-    .section-one__form-element {
-      width: $col12;
-    }
-  }
 }
 
-.section-one__form-element {
+.welcome-section__form-element {
   flex: 1 1 auto;
   padding: 0.5em 0.5em;
   margin: 2em 0px 2em 1.5em;
@@ -108,14 +86,45 @@
   box-sizing: border-box;
 }
 
-.section-one__form-element:first-child {
+.welcome-section__form-element:first-child {
   margin-left: 0px;
 }
 
-.section-one__text-input {
+.welcome-section__text-input {
   flex: 1 0 auto;
 }
 
-.section-one__dropdown, .section-one__submit {
+.welcome-section__dropdown, .welcome-section__submit {
   flex: 0 0 200px;
+}
+
+
+//MEDIUM DISPLAY
+
+
+//SMALL DISPLAY
+@media screen and (max-width: $breakpoint-small) {
+  .welcome-section__layout-upper > h1, .welcome-section__layout-upper > p {
+    margin: 0px $page-padding * 2;
+    text-align: center;
+  }
+
+  .welcome-section__form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome-section__form-element {
+    flex: 0 0 auto;
+    width: 80%;
+    margin: 0.5em 0px;
+    max-width: 400px;
+  }
+}
+
+
+//X-SMALL DISPLAY
+@media screen and (max-width: $breakpoint-x-small) {
+  .welcome-section__form {width: 100%;}
+  .welcome-section__form-element {width: $col12;}
 }
