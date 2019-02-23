@@ -1,5 +1,8 @@
+//Pull out media queries to end of file
+
 footer {
   font-family: "ProximaNova";
+  z-index: 20;
 }
 
 .footer__upper, .social-media-bar {
@@ -7,7 +10,6 @@ footer {
 }
 
 .footer__upper {}
-
 
 .footer__nav {
   @media screen and (max-width: $breakpoint-small) {

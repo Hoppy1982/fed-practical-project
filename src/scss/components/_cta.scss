@@ -28,6 +28,8 @@
 
 .cta__item {
   position: relative;
+  top: 0px;
+  right: 0px;
   min-height: 200px;
   margin-left: $page-padding;
   flex: 1 0 100px;
@@ -43,6 +45,8 @@
 
 .cta__filter {
   position: absolute;
+  top: 0px;
+  right: 0px;
   background-color: #262626;
   opacity: 0.7;
   height: 100%;
@@ -51,7 +55,6 @@
 }
 
 .cta__item-contents {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
