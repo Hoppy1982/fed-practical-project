@@ -117,9 +117,11 @@
   .welcome-section__form-element {
     flex: 0 0 auto;
     width: 80%;
-    margin: 0.5em 0px;
+    margin: ($page-padding / 2) 0px;
     max-width: 400px;
   }
+  .welcome-section__form-element:first-child {margin-top: $page-padding;}
+  .welcome-section__form-element:last-child {margin-bottom: $page-padding;}
 }
 
 
