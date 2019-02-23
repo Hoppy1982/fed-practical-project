@@ -68,16 +68,17 @@
   width: 3em;
 }
 
-.cta__item h2,{
+.cta__item h2 {
   color: white;
   text-align: center;
   margin: 0px;
-
 }
 
-.cta__item p,{
+.cta__item p {
   color: white;
   text-align: center;
   margin: 0px;
   padding: 0px;
+  //max-width only req for IE11
+  max-width: 80%;
 }
