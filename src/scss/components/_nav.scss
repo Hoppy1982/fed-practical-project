@@ -1,35 +1,40 @@
-.page-nav {position: relative;}
+//LARGE DISPLAY
+.page-nav {
+  text-align: right;
+}
 
-.page-nav__menu-wrapper {
-  position: absolute;
-  top: 0px;
-  right: 180px;
-  border: solid blue 3px;
-  min-height: 100px;
-  min-width: 100px;
+#page-nav__menu-wrapper {
+  text-align: right;
+  transition: height 0.3s ease-in;
+  margin-bottom: $page-padding;
 }
 
 .page-nav__list {
   display: flex;
   flex-direction: row;
-  //transition: margin 300ms ease-in;
+  right: $nav-menu-width-medium;
+  align-items: center;
+  transition: margin-right 0.3s ease-in;
+  height: 100%;
+  overflow: hidden;
 }
 
 .page-nav__item {
   display: inline-block;
   font-family: "ProximaNova";
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1em;
   width: 120px;
   padding: 10px 0px;
   text-align: center;
   border-radius: 4px;
   a {text-decoration: none;}
+  flex: 1 0 auto;
 }
 
 .page-nav__item:hover {
   background-color: $color-brand;
-  color: white;
+  color: #fff;
   font-weight: 200;
 }
 
@@ -38,95 +43,82 @@
 }
 
 #page-nav__menu-button {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 5px 11px;
-  color: #fff;
-  background-color: #222;
-  border: 1px solid;
-  border-radius: 3px;
+  display: none;
+  padding: 4px;
+  width: 48px;
+  height: 48px;
+  background-color: $color-brand;
+  border-radius: 6px;
+
+  img {
+   width: 100%;
+   height: 100%;
+ }
 }
 
-#page-nav__expand-toggle:checked ~ .page-nav__list {
-    right: 0px;
-    margin-right: - $page-padding;
-    transition: margin 300ms ease-in;
+#page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper {
+  height: auto;
 }
 
+#page-nav__expand-toggle:not(checked) ~ #page-nav__menu-wrapper {
+  height: auto;
+}
+
+#page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper .page-nav__list {
+  margin-right: 0px;
+}
+
+#page-nav__expand-toggle:not(checked) ~ #page-nav__menu-wrapper .page-nav__list {
+  margin-right: 0px;
+}
+
+//MEDIUM DISPLAY
 @media screen and (max-width: $breakpoint-medium) {
+  #page-nav__menu-button {display: inline-block;}
+
   .page-nav__list {
     flex-direction: column;
-    margin-right: - 250px;
-    position: fixed;
-    top: 100px;
-    right: 0px;
-    width: 250px;
+    justify-content: space-between;
+    width: $nav-menu-width-medium;
     color: #fff;
-    background-color: #222;
-    z-index: 4;
+    background-color: $color-brand;
   }
 
-  #page-nav__menu-button {
-    //position: fixed;
-    //top: 60px;
-    //right: 0px;
-    //z-index: 4;
-    //margin: 0px;
-  }
-}
-
-@media screen and (max-width: $breakpoint-medium - 3px) {
-  .page-nav__list {transition: margin 300ms ease-in;}
-}
-/*Before make small screen nav
-.page-nav__list {
-  @media screen and (max-width: $breakpoint-small) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-left: $page-padding;
-
-    > .page-nav__item {
-      //display: none;
-    }
-
-    .no-js & > .page-nav__item {
-      display: block;
-      margin: 10px 0 10px;
-    }
+  .page-nav__item {
+    width: 100%;
+    border-radius: 0;
   }
 
-  @media screen and (max-width: $breakpoint-x-small) {
-    > .page-nav__item {
-      display: none;
-    }
+  .page-nav__item:hover {
+    background-color: $color-brand-tint;
+    color: $color-brand;
+  }
 
+  #page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper {
+    height: 18em;
+  }
+
+  #page-nav__expand-toggle:not(checked) ~ #page-nav__menu-wrapper {
+    height: 0px;
+  }
+
+  #page-nav__expand-toggle:checked ~ #page-nav__menu-wrapper .page-nav__list {
+    margin-right: 0px;
+  }
+
+  #page-nav__expand-toggle:not(checked) ~ #page-nav__menu-wrapper .page-nav__list {
+    margin-right: 0- $nav-menu-width-medium - $page-padding;
+  }
+
+  #page-nav__expand-toggle:checked ~ #page-nav__menu-button {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 }
 
-.page-nav__item {
-  display: inline-block;
-  font-family: "ProximaNova";
-  font-weight: 600;
-  font-size: 1.1rem;
-  width: 120px;
-  padding: 10px 0px;
-  text-align: center;
-  border-radius: 4px;
-
-  a {
-    text-decoration: none;
-  }
-
-  @media screen and (max-width: 895px) {
-    margin-left: 18px;
-  }
+//X-SMALL DISPLAY
+@media screen and (max-width: $breakpoint-x-small) {
+  .page-nav {width: 100%;}
+  .page-nav__list {width: 100%;}
+  .page-nav__nav-list {width: 100%;}
 }
-
-.page-nav__item:hover {
-  background-color: $color-brand;
-  color: white;
-  font-weight: 200;
-}
-*/

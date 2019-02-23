@@ -1,3 +1,5 @@
+//TODO Separate out media queries to end of file
+
 .cta {
   background-image: url('/public/images/_ctas/cta-bg.png');
   background-size: cover;
@@ -26,6 +28,8 @@
 
 .cta__item {
   position: relative;
+  top: 0px;
+  right: 0px;
   min-height: 200px;
   margin-left: $page-padding;
   flex: 1 0 100px;
@@ -41,6 +45,8 @@
 
 .cta__filter {
   position: absolute;
+  top: 0px;
+  right: 0px;
   background-color: #262626;
   opacity: 0.7;
   height: 100%;
@@ -49,7 +55,6 @@
 }
 
 .cta__item-contents {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,23 +64,21 @@
   padding-right: $page-padding;
 }
 
-.cta__item i {
-  color: white;
-  margin: 0px;
-  font-size: 2em;
-
+.cta__item img {
+  width: 3em;
 }
 
-.cta__item h2,{
+.cta__item h2 {
   color: white;
   text-align: center;
   margin: 0px;
-
 }
 
-.cta__item p,{
+.cta__item p {
   color: white;
   text-align: center;
   margin: 0px;
   padding: 0px;
+  //max-width only req for IE11
+  max-width: 80%;
 }

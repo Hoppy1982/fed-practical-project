@@ -1,32 +1,27 @@
-.jobs-browser {
-  background-color: #f0f0f0;
-}
+//LARGE DISPLAY
+.jobs-browser {background-color: #f0f0f0;}
 
 .jobs-browser__layout {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  @media screen and (max-width: $breakpoint-small) {
-      flex-direction: column;
-  }
+  margin-top: $page-padding / 2;
+  margin-bottom: $page-padding / 2;
 }
 
+//TODO finish using col variables to determine width and look at whether can
+//remove some flex
 .jobs-browser__left {
-  flex: 1 1 66%;
+  //flex: 1 1 66%;
   margin-right: $page-padding;
-
-  @media screen and (max-width: $breakpoint-medium) {
-    flex: 1 1 50%;
-  }
+  //temp
+  width: $col8;
 }
 
 .jobs-browser__right {
-  flex: 1 1 33%;
-
-  @media screen and (max-width: $breakpoint-medium) {
-    flex: 1 1 50%;
-  }
+  //flex: 1 1 33%;
+  //temp
+  width: $col4;
 }
 
 .jobs-browser__header {
@@ -34,49 +29,38 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 2em;
 }
 
 .jobs-browser__left-layout {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
-  @media screen and (max-width: $breakpoint-medium) {
-    flex-direction: column;
-  }
 }
 
 .jobs-browser__jobs {
-  flex: 1 1 50%;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .jobs-browser__jobs-item {
-  flex: 1 1 50%;
   margin-bottom: 1em;
 }
 
-//BEM this
 .jobs-browser__jobs-item > a, .jobs-browser__jobs-item > p {
   display: inline-block;
 }
 
-//BEM this
 .jobs-browser__jobs-item > p {
   margin: 0px;
   color: grey;
 }
 
-//BEM this
 .jobs-browser__header > a > i {
   vertical-align: baseline;
   font-size: 0.5em;
 }
-
-
 
 .featured-jobs {
   display: flex;
@@ -87,21 +71,48 @@
 .featured-jobs__item {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 2em;
+  margin-bottom: $page-padding;
 }
 
 .featured-jobs__img {
-  height: 80px;
-  margin-right: $page-padding;
+  width: calc(#{50%} - #{$page-padding / 2});
+  border: solid lightgrey 2px;
 }
 
-.featured-jobs__data {
-  flex: 1 1 60%;
-}
+.featured-jobs__data {width: calc(#{50%} - #{$page-padding / 2});}
 
 .featured-jobs__link, .featured-jobs__location, .featured-jobs__salary {
   padding: 0px;
   margin: 0px;
 }
+
+
+//MEDIUM DISPLAY
+@media screen and (max-width: $breakpoint-medium) {
+  .jobs-browser__left-layout {flex-direction: column;}
+  .jobs-browser__left {flex: 1 1 $col4;}
+  .jobs-browser__right {flex: 1 1 $col8;}
+  .jobs-browser__header {
+    flex-direction: column;
+    > a {align-self: flex-end;}
+  }
+}
+
+//SMALL DISPLAY
+@media screen and (max-width: $breakpoint-small) {
+  .jobs-browser__layout {flex-direction: column;}
+  .jobs-browser__left {
+    width: 100%;
+    font-size: 1.2em;
+  }
+  .jobs-browser__right {width: 100%;}
+  .jobs-browser__header {
+    flex-direction: row;
+    > a {align-self: baseline;}
+  }
+  .featured-jobs__link, .featured-jobs__location, .featured-jobs__salary {font-size: 1.5em;}
+}
+
+//X-SMALL DISPLAY

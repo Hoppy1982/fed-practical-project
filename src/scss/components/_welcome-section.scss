@@ -1,0 +1,139 @@
+//LARGE DISPLAY
+.welcome-section {
+  background-image: url('/public/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  position: relative;
+}
+
+.welcome-section__layout {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.welcome-section__layout-upper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.welcome-section__layout-lower {
+  flex: 0 0 auto;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-section__layout-upper > h1, .welcome-section__layout-upper > p {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  z-index: 2;
+}
+
+.welcome-section__layout-upper > h1 {
+  font-size: 3em;
+}
+
+.welcome-section__layout-upper > p {
+  font-size: 1.5em;
+}
+
+.welcome-section__upper-filter {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.welcome-section__lower-filter {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.welcome-section__form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
+  margin-left: 0px;
+}
+
+.welcome-section__form-element {
+  flex: 1 1 auto;
+  padding: 0.5em 0.5em;
+  margin: 2em 0px 2em 1.5em;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.welcome-section__form-element:first-child {
+  margin-left: 0px;
+}
+
+.welcome-section__text-input {
+  flex: 1 0 auto;
+}
+
+.welcome-section__dropdown, .welcome-section__submit {
+  flex: 0 0 200px;
+}
+
+
+//MEDIUM DISPLAY
+
+
+//SMALL DISPLAY
+@media screen and (max-width: $breakpoint-small) {
+  .welcome-section__layout-upper > h1, .welcome-section__layout-upper > p {
+    margin: 0px $page-padding * 2;
+    text-align: center;
+  }
+
+  .welcome-section__form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome-section__form-element {
+    flex: 0 0 auto;
+    width: 80%;
+    margin: ($page-padding / 2) 0px;
+    max-width: 400px;
+  }
+  .welcome-section__form-element:first-child {margin-top: $page-padding;}
+  .welcome-section__form-element:last-child {margin-bottom: $page-padding;}
+}
+
+
+//X-SMALL DISPLAY
+@media screen and (max-width: $breakpoint-x-small) {
+  .welcome-section__form {width: 100%;}
+  .welcome-section__form-element {width: $col12;}
+}

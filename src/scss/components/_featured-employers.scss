@@ -66,8 +66,9 @@
 }
 
 
-//This lot is to get push out the img
-//elements to the outside of their flexboxes.
+//This lot is to get push out the img elements to the outside of their flexboxes.
+//EDIT: Since now using calculated column widths seems this isn't necessary.
+//TODO confirm the above then delete.
 @media screen and (max-width: $breakpoint-medium) {
   @for $i from 0 through $n-featured-employers {
     @if $i % 3 == 0 {
