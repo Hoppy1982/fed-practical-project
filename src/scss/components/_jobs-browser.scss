@@ -76,7 +76,10 @@
   margin-bottom: $page-padding;
 }
 
-.featured-jobs__img {width: calc(#{50%} - #{$page-padding / 2});}
+.featured-jobs__img {
+  width: calc(#{50%} - #{$page-padding / 2});
+  border: solid lightgrey 2px;
+}
 
 .featured-jobs__data {width: calc(#{50%} - #{$page-padding / 2});}
 
